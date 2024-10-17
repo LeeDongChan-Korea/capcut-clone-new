@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+.main {
+  display: flex;
+}
+.main-board {
+  display: flex;
+  width: 95vw;
+  background-color: #f8f8ff;
+  height: 70vh;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sub-board {
+  background-color: whitesmoke;
+  height: 30vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-menu {
+  width: 5vw; /* 왼쪽 메뉴의 기본 너비 */
+  background-color: darkslategray;
+  height: 100vh;
+  overflow-y: hidden; /* 세로 스크롤을 숨깁니다. */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.left-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%; /* ul 요소를 부모 요소인 .left-menu에 맞춰 높이를 설정합니다. */
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.left-menu ul li {
+  padding: 5px;
+  height: 3vw;
+}
+
+.left-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 8px 10px;
+  border-radius: 5px;
+  height: 100%;
+  transition: background-color 0.3s; /* 호버 효과의 변화를 부드럽게 만듭니다. */
+}
+
+.left-menu ul li a img{
+  width: 100%;
+  height: 100%;
+}
+
+.left-menu ul li a:hover {
+  background-color: #ccc; /* 호버 효과 시 배경색 변경 */
+}
+
+.dropzone {
+  display: flex;
+  background-color: white;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: #6fa8c0;
 }
 
-.App-link {
-  color: #61dafb;
+.placeholder {
+  justify-content: center;
+  position: absolute;
+  width: 30%;
+  height: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropzone-placeholder-upload {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+.dropzone-placeholder-side {
+  display: flex;
+  width: 100%;
+  height: 30%;
+}
+.dropzone-placeholder-upload-icon {
+  display: flex;
+  width: 30%;
+  height: 50%;
+}
+.dropzone-placeholder-upload-icon a img{
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+}
+.dead-center {
+  justify-content: center;
+  align-items: center;
+}
+.row-center {
+  justify-content: center;
+  align-items: center;
+}
+.col-center {
+  justify-content: center;
+  align-items: center;
 }
