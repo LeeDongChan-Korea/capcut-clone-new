@@ -1,70 +1,33 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
 ### `npm run build` fails to minify
+### folder directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+capcut-clone/
+│
+├── public/
+│   ├── index.html
+│   └── assets/               # 공통 이미지, 아이콘 등 정적 파일
+│
+├── src/
+│   ├── assets/               # 프로젝트 내에서 사용하는 정적 리소스 (예: 이미지, 비디오, 오디오)
+│   ├── components/           # 재사용 가능한 컴포넌트 (버튼, 헤더 등)
+│   ├── features/             # 각 기능별 컴포넌트 (동영상 편집, 타임라인 관리 등)
+│   │   ├── timeline/         # 타임라인 관련 기능
+│   │   ├── editor/           # 동영상 편집 기능
+│   │   └── export/           # 동영상 내보내기 관련 기능
+│   ├── hooks/                # 커스텀 훅
+│   ├── pages/                # 각 페이지 (홈, 편집 화면 등)
+│   ├── services/             # API 및 비즈니스 로직 (ffmpeg.js 연동 등)
+│   ├── styles/               # 전역 스타일 (CSS, SASS, Styled-Components)
+│   ├── utils/                # 유틸리티 함수 (날짜 처리, 파일 변환 등)
+│   ├── App.js                # 최상위 컴포넌트
+│   ├── index.js              # 엔트리 포인트
+│   └── router/               # 라우팅 관련 파일
+│
+├── .gitignore
+├── package.json
+└── README.md
