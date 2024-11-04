@@ -97,15 +97,19 @@ const UploadComponent = () => {
     [onChangeFiles]
   );
 
-  const handleUpload = ({ target }) => {
-    const file = target.files[0];
+  const handleUpload = (e) => {
+    onChangeFiles(e);
+
+    const file = e.target.files[0];
     setFileInfo(file);
   };
 
   const setFileInfo = (file) => {
-    const { name, size: byteSize, type } = file;
-    const size = (byteSize / (1024 * 1024)).toFixed(2) + 'mb';
-    setUploadedInfo({ name, size, type });  // name, size, type 정보를 uploadedInfo에 저장
+    if( file ) {
+      const { name, size: byteSize, type } = file;
+      const size = (byteSize / (1024 * 1024)).toFixed(2) + 'mb';
+      setUploadedInfo({ name, size, type });  // name, size, type 정보를 uploadedInfo에 저장
+    }
   };
 
   const initDragEvents = useCallback(() => {
